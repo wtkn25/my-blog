@@ -13,6 +13,7 @@ const Home = () => {
         edges {
           node {
             title
+            slug
             publishedDate
           }
         }
@@ -26,7 +27,7 @@ const Home = () => {
       <ul>
         {data.allContentfulBlogPost.edges.map((edge) => {
           return (
-            <li>
+            <li key={edge.node.slug}>
               <h2>{edge.node.title}</h2>
               <p>{edge.node.publishedDate}</p>
             </li>
