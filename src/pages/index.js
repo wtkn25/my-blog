@@ -1,5 +1,5 @@
 import React from "react"
-import { useStaticQuery, graphql } from 'gatsby';
+import { useStaticQuery, graphql, Link } from 'gatsby';
 
 import Layout from '../components/layout';
 
@@ -28,8 +28,11 @@ const Home = () => {
         {data.allContentfulBlogPost.edges.map((edge) => {
           return (
             <li key={edge.node.slug}>
-              <h2>{edge.node.title}</h2>
-              <p>{edge.node.publishedDate}</p>
+              <Link to={`/${edge.node.slug}`}>
+                <h2>{edge.node.title}</h2>
+                <p>{edge.node.publishedDate}</p>
+              </Link>
+
             </li>
           )
         })}
