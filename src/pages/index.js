@@ -1,5 +1,6 @@
 import React from "react"
 import { useStaticQuery, graphql, Link } from 'gatsby';
+import styled from 'styled-components';
 
 import Layout from '../components/layout';
 
@@ -22,24 +23,55 @@ const Home = () => {
   `)
 
   return (
-    <Layout>
-      <h1>blog</h1>
-      <ul>
-        {data.allContentfulBlogPost.edges.map((edge) => {
-          return (
-            <li key={edge.node.slug}>
-              <Link to={`/${edge.node.slug}`}>
-                <h2>{edge.node.title}</h2>
-                <p>{edge.node.publishedDate}</p>
-              </Link>
-
-            </li>
-          )
-        })}
-
-      </ul>
-    </Layout>
+    <Wrapper>
+      <Layout>
+        <PostUl>
+          {data.allContentfulBlogPost.edges.map((edge) => {
+            return (
+              <PostLink to={`/${edge.node.slug}`}>
+                <PostLi key={edge.node.slug}>
+                  <h2>{edge.node.title}</h2>
+                  <PostPublishedData>{edge.node.publishedDate}</PostPublishedData>
+                </PostLi>
+              </PostLink>
+            )
+          })}
+        </PostUl>
+      </Layout>
+    </Wrapper>
   )
 }
 
 export default Home
+
+const Wrapper = styled.div`
+  max-width: 980px;
+  margin: 0 auto;
+
+`
+
+const PostUl = styled.ul`
+  list-style: none;
+  padding: 0;
+`
+
+const PostLi = styled.li`
+  background-color: #eee;
+  padding: 1rem 3rem;
+  margin-bottom: 1rem;
+  text-decoration: none;
+  border-radius: 15px;
+  &:hover {
+    background-color: #ddd;
+  }
+`
+
+const PostLink = styled(Link)`
+  color: #000;
+  text-decoration: none;
+`
+
+const PostPublishedData = styled.p`
+  font-style: italic;
+  color: #555;
+`
