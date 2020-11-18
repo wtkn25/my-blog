@@ -14,7 +14,9 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "dependencies": {
+    "babel-plugin-styled-components": "^1.11.1",
     "gatsby": "^2.25.3",
+    "gatsby-plugin-styled-components": "^3.4.0",
     "gatsby-remark-images-contentful": "^2.4.0",
     "gatsby-remark-prismjs": "^3.7.0",
     "gatsby-remark-prismjs-title": "^1.0.0",
@@ -22,7 +24,8 @@
     "gatsby-transformer-remark": "^2.10.0",
     "prismjs": "^1.22.0",
     "react": "^16.12.0",
-    "react-dom": "^16.12.0"
+    "react-dom": "^16.12.0",
+    "styled-components": "^5.2.1"
   },
   "devDependencies": {
     "dotenv": "^8.2.0",

@@ -1,11 +1,21 @@
 import React from 'react';
+import styled from 'styled-components';
 
 const Footer = () => {
   return (
-    <footer>
-      <p>Created by iratawa © 2020</p>
-    </footer>
+    <Wrapper>
+      <CopyWrite>Created by iratawa © 2020</CopyWrite>
+    </Wrapper>
   )
 }
 
 export default Footer
+
+const Wrapper = styled.div`
+  width: 100%;
+  text-align: center;
+`
+
+const CopyWrite = styled.p`
+  padding: 1rem;
+`
