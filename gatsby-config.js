@@ -23,7 +23,8 @@ module.exports = {
       options: {
         plugins: [
           'gatsby-remark-prismjs-title',
-          'gatsby-remark-prismjs'
+          'gatsby-remark-prismjs',
+          'gatsby-remark-images-contentful'
         ],
       },
     },

@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "gatsby": "^2.25.3",
+    "gatsby-remark-images-contentful": "^2.4.0",
     "gatsby-remark-prismjs": "^3.7.0",
     "gatsby-remark-prismjs-title": "^1.0.0",
     "gatsby-source-contentful": "^4.0.0",
