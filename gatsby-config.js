@@ -18,6 +18,14 @@ module.exports = {
         accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
       }
     },
-    'gatsby-transformer-remark'
+    {
+      resolve: 'gatsby-transformer-remark',
+      options: {
+        plugins: [
+          'gatsby-remark-prismjs-title',
+          'gatsby-remark-prismjs'
+        ],
+      },
+    },
   ],
 }
