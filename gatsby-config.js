@@ -10,6 +10,10 @@ require("dotenv").config({
 
 module.exports = {
   /* Your site config here */
+  siteMetadata: {
+    title: "いらたわ技術ブログ",
+    description: "プログラミングや関連技術の使い方を紹介するブログです"
+  },
   plugins: [
     {
       resolve: 'gatsby-source-contentful',
@@ -28,6 +32,7 @@ module.exports = {
         ],
       },
     },
-    'gatsby-plugin-styled-components'
+    'gatsby-plugin-styled-components',
+    'gatsby-plugin-react-helmet'
   ],
 }

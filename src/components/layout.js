@@ -3,11 +3,13 @@ import styled from 'styled-components';
 
 import Header from '../components/header';
 import Footer from '../components/footer';
+import SEO from '../components/SEO';
 
 const Layout = (props) => {
 
   return (
     <Wrapper>
+      <SEO />
       <Content>
         <Header />
         {props.children}
