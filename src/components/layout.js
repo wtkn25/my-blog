@@ -9,7 +9,6 @@ const Layout = (props) => {
 
   return (
     <Wrapper>
-      <SEO />
       <Content>
         <Header />
         {props.children}

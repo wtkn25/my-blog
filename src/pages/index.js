@@ -1,6 +1,7 @@
 import React from "react"
 import { useStaticQuery, graphql, Link } from 'gatsby';
 import styled from 'styled-components';
+import SEO from '../components/SEO';
 
 import Layout from '../components/layout';
 
@@ -24,6 +25,7 @@ const Home = () => {
 
   return (
     <Wrapper>
+      <SEO />
       <Layout>
         <PostUl>
           {data.allContentfulBlogPost.edges.map((edge) => {
