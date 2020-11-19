@@ -17,6 +17,7 @@ const BlogPost = (props) => {
       <Layout>
         <h1>{post.title}</h1>
         <p>{post.publishedDate}</p>
+        <Hr />
         <div dangerouslySetInnerHTML={{ __html: post.body.childMarkdownRemark.html }} />
       </Layout >
     </Wrapper>
@@ -44,4 +45,8 @@ export const query = graphql`
 const Wrapper = styled.div`
   max-width: 980px;
   margin: 0 auto;
+`
+
+const Hr = styled.hr`
+  margin-bottom: 3rem;
 `

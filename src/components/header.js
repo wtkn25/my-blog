@@ -1,13 +1,14 @@
 import React from 'react';
-import { Link } from 'gatsby';
+import { Link, graphql, useStaticQuery } from 'gatsby';
 import styled from 'styled-components';
 
 const Header = () => {
+  const { site } = useStaticQuery(query)
   return (
     <Wrapper>
       <HeaderContent>
         <Link to="/">
-          <HPTitle>tech.iratawa</HPTitle>
+          <HPTitle>{site.siteMetadata.title}</HPTitle>
         </Link>
       </HeaderContent>
     </Wrapper >
@@ -15,6 +16,16 @@ const Header = () => {
 }
 
 export default Header
+
+const query = graphql`
+  query {
+    site {
+      siteMetadata {
+        title
+      }
+    }
+  }
+`
 
 const Wrapper = styled.div`
   width: 100%;
