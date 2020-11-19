@@ -28,8 +28,8 @@ const Home = () => {
         <PostUl>
           {data.allContentfulBlogPost.edges.map((edge) => {
             return (
-              <PostLink to={`/${edge.node.slug}`}>
-                <PostLi key={edge.node.slug}>
+              <PostLink key={edge.node.slug} to={`/${edge.node.slug}`}>
+                <PostLi>
                   <h2>{edge.node.title}</h2>
                   <PostPublishedData>{edge.node.publishedDate}</PostPublishedData>
                 </PostLi>
