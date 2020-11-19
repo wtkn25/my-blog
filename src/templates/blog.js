@@ -12,6 +12,7 @@ const BlogPost = (props) => {
     <Wrapper>
       <SEO
         title={post.title}
+        description={post.body.childMarkdownRemark.excerpt}
       />
       <Layout>
         <h1>{post.title}</h1>
@@ -34,6 +35,7 @@ export const query = graphql`
       body {
         childMarkdownRemark {
           html
+          excerpt(format: PLAIN)
         }
       }
     }
