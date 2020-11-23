@@ -11,7 +11,7 @@ require("dotenv").config({
 module.exports = {
   /* Your site config here */
   siteMetadata: {
-    title: "watakn's programming",
+    title: "watakn tech",
     description: "プログラミングや関連技術の使い方を紹介するブログです"
   },
   plugins: [

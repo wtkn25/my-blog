@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const Footer = () => {
   return (
     <Wrapper>
-      <CopyWrite>Created by iratawa © 2020</CopyWrite>
+      <CopyWrite>Created by watakn © 2020</CopyWrite>
     </Wrapper>
   )
 }
