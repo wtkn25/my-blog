@@ -3,7 +3,6 @@ import styled from 'styled-components';
 
 import Header from '../components/header';
 import Footer from '../components/footer';
-import SEO from '../components/SEO';
 
 const Layout = (props) => {
 
