@@ -28,7 +28,13 @@ module.exports = {
         plugins: [
           'gatsby-remark-prismjs-title',
           'gatsby-remark-prismjs',
-          'gatsby-remark-images-contentful'
+          'gatsby-remark-images-contentful',
+          {
+            resolve: "gatsby-remark-external-links",
+            options: {
+              target: "_blank"
+            }
+          }
         ],
       },
     },
