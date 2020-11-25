@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 import Header from '../components/header';
 import Footer from '../components/footer';
-import GlobalCss from '../components/GlobalCss'
+import GlobalCss from '../components/globalCss'
 
 
 const Layout = (props) => {
