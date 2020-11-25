@@ -3,17 +3,22 @@ import styled from 'styled-components';
 
 import Header from '../components/header';
 import Footer from '../components/footer';
+import GlobalCss from '../components/GlobalCss'
+
 
 const Layout = (props) => {
 
   return (
-    <Wrapper>
-      <Content>
-        <Header />
-        {props.children}
-      </Content>
-      <Footer />
-    </Wrapper>
+    <div>
+      <GlobalCss />
+      <Wrapper>
+        <Content>
+          <Header />
+          {props.children}
+        </Content>
+        <Footer />
+      </Wrapper>
+    </div>
   )
 }
 
