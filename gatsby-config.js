@@ -13,7 +13,7 @@ module.exports = {
   siteMetadata: {
     title: "watakn tech",
     description: "プログラミングや関連技術の使い方を紹介するブログです",
-    siteUrl: 'https://watakn.com'
+    siteUrl: process.env.SITE_URL
   },
   plugins: [
     {
