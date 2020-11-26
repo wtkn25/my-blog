@@ -12,7 +12,8 @@ module.exports = {
   /* Your site config here */
   siteMetadata: {
     title: "watakn tech",
-    description: "プログラミングや関連技術の使い方を紹介するブログです"
+    description: "プログラミングや関連技術の使い方を紹介するブログです",
+    siteUrl: 'https://watakn.com'
   },
   plugins: [
     {
