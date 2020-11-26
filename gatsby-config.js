@@ -27,6 +27,7 @@ module.exports = {
       resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
+          'gatsby-remark-embed-video',
           'gatsby-remark-prismjs-title',
           'gatsby-remark-prismjs',
           'gatsby-remark-images-contentful',

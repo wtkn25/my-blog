@@ -18,6 +18,10 @@ const Global = createGlobalStyle`
       opacity: .1;
     }
   }
+
+  .embedVideo-container {
+    text-align: center;
+  }
 `
 
 const GlobalCss = () => {
