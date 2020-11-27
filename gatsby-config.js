@@ -27,7 +27,17 @@ module.exports = {
       resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
-          'gatsby-remark-embed-video',
+          {
+            resolve: "gatsby-remark-embed-video",
+            options: {
+              urlOverrides: [
+                {
+                  id: 'youtube',
+                  embedURL: (videoId) => `https://www.youtube.com/embed/${videoId}`,
+                }
+              ]
+            }
+          },
           'gatsby-remark-prismjs-title',
           'gatsby-remark-prismjs',
           'gatsby-remark-images-contentful',
