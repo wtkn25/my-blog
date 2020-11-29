@@ -47,7 +47,18 @@ module.exports = {
           },
           'gatsby-remark-prismjs-title',
           'gatsby-remark-prismjs',
-          'gatsby-remark-images-contentful',
+          {
+            resolve: 'gatsby-remark-images-contentful',
+            options: {
+              linkImagesToOriginal: false,
+            },
+          },
+          {
+            resolve: 'gatsby-remark-images-zoom',
+            options: {
+              background: '#000'
+            },
+          },
           'gatsby-remark-responsive-iframe',
           {
             resolve: "gatsby-remark-external-links",
