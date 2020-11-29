@@ -48,6 +48,7 @@ module.exports = {
           'gatsby-remark-prismjs-title',
           'gatsby-remark-prismjs',
           'gatsby-remark-images-contentful',
+          'gatsby-remark-responsive-iframe',
           {
             resolve: "gatsby-remark-external-links",
             options: {
