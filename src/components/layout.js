@@ -42,10 +42,6 @@ const Grid = styled.div`
   }
 `
 
-const HedaerArea = styled.div`
-  grid-area: header;
-`
-
 const ContentArea = styled.div`
   grid-area: main;
   background-color: #FFF;
@@ -54,8 +50,4 @@ const ContentArea = styled.div`
 const SidebarArea = styled.div`
   grid-area: sidebar;
   background-color: #aaaaaa;
-`
-
-const FooterArea = styled.div`
-  grid-area: footer;
 `
