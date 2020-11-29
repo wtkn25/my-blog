@@ -35,8 +35,9 @@ const Grid = styled.div`
   grid-template: 
     "main   sidebar" 1fr
     / 1fr 0px;
-  gap: 16px;
+  /* gap: 16px; */
   > * {
+    overflow: hidden;
     padding: 16px;
   }
 `
