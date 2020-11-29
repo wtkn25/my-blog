@@ -1,7 +1,9 @@
 import React from 'react';
 import { createGlobalStyle } from 'styled-components';
+import { normalize } from 'styled-normalize'
 
 const Global = createGlobalStyle`
+  ${normalize}
   blockquote {
     position: relative;
     background-color: #F7F7F7;
