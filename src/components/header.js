@@ -29,10 +29,11 @@ const query = graphql`
 
 const Wrapper = styled.div`
   width: 100%;
+  background-color: #afeeee;
 `
 
 const HeaderContent = styled.div`
-  max-width: 980px;
+  max-width: 900px;
   margin: 0 auto;
 `
 

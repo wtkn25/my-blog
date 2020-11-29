@@ -43,8 +43,6 @@ export const query = graphql`
   } `
 
 const Wrapper = styled.div`
-  max-width: 980px;
-  margin: 0 auto;
 `
 
 const Hr = styled.hr`

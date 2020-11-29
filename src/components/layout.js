@@ -11,26 +11,50 @@ const Layout = (props) => {
   return (
     <div>
       <GlobalCss />
-      <Wrapper>
-        <Content>
-          <Header />
+      <Header />
+      <Grid>
+        <ContentArea>
           {props.children}
-        </Content>
-        <Footer />
-      </Wrapper>
+        </ContentArea>
+        {/* <SidebarArea></SidebarArea> */}
+      </Grid>
+      <Footer />
     </div>
   )
 }
 
 export default Layout
 
-const Wrapper = styled.div`
-  margin: 0 auto;
+const Grid = styled.div`
+  /* max-width: 1200px; */
+  max-width: 900px;
+  width: 100%;
+  margin: 1rem auto;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template: 
+    "main   sidebar" 1fr
+    / 1fr 0px;
+  gap: 16px;
+  > * {
+    padding: 16px;
+  }
 `
 
-const Content = styled.div`
-  flex-grow: 1;
+const HedaerArea = styled.div`
+  grid-area: header;
+`
+
+const ContentArea = styled.div`
+  grid-area: main;
+  background-color: #FFF;
+`
+
+const SidebarArea = styled.div`
+  grid-area: sidebar;
+  background-color: #aaaaaa;
+`
+
+const FooterArea = styled.div`
+  grid-area: footer;
 `

@@ -24,9 +24,10 @@ const Home = () => {
   `)
 
   return (
-    <Wrapper>
+    <div>
       <SEO />
       <Layout>
+        <h1>新着記事</h1>
         <PostUl>
           {data.allContentfulBlogPost.edges.map((edge) => {
             return (
@@ -40,17 +41,11 @@ const Home = () => {
           })}
         </PostUl>
       </Layout>
-    </Wrapper>
+    </div>
   )
 }
 
 export default Home
-
-const Wrapper = styled.div`
-  max-width: 980px;
-  margin: 0 auto;
-
-`
 
 const PostUl = styled.ul`
   list-style: none;

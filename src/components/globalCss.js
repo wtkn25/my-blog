@@ -4,6 +4,9 @@ import { normalize } from 'styled-normalize'
 
 const Global = createGlobalStyle`
   ${normalize}
+  body {
+  background-color: #F7F7F7;
+  }
   blockquote {
     position: relative;
     background-color: #F7F7F7;
@@ -22,7 +25,6 @@ const Global = createGlobalStyle`
   }
 
   .embedVideo-container {
-    text-align: center;
   }
 `
 
