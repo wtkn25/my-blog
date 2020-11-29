@@ -16,7 +16,7 @@ const Home = () => {
           node {
             title
             slug
-            publishedDate(formatString: "MMMM Do, YYYY")
+            publishedDate(formatString: "YYYY年MM月D日")
           }
         }
       }

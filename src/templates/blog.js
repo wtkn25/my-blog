@@ -32,7 +32,7 @@ export const query = graphql`
       slug: {eq: $slug}
     ) {
       title
-      publishedDate(formatString: "MMMM Do, YYYY")
+      publishedDate(formatString: "YYYY年MM月D日")
       body {
         childMarkdownRemark {
           html
