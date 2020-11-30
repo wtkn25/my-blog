@@ -2,11 +2,15 @@ import React from 'react';
 import { Link, graphql } from 'gatsby'
 import styled from 'styled-components';
 import SEO from '../components/SEO';
+import "@fortawesome/fontawesome-svg-core/styles.css";
+import { config } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faClock } from '@fortawesome/free-solid-svg-icons'
 
 import Layout from '../components/layout';
 import Pagination from '../components/pagination';
+
+config.autoAddCss = false;
 
 const BlogIndex = (props) => {
   return (
