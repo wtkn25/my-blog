@@ -26,7 +26,7 @@ const PageLink = styled(Link)`
   display: inline-block;
   padding: 1rem;
   margin: 1rem;
-  border: 1px solid #c8e4ff;
+  border: 1px solid #000;
   text-decoration: none;
   color: #000;
 `

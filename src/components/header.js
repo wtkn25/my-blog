@@ -29,7 +29,8 @@ const query = graphql`
 
 const Wrapper = styled.div`
   width: 100%;
-  background-color: #c8e4ff;
+  background-color: #FFF;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, .5);
 `
 
 const HeaderContent = styled.div`
