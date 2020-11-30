@@ -17,6 +17,12 @@ module.exports = {
   },
   plugins: [
     {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        policy: [{ userAgent: '*', allow: '/' }]
+      }
+    },
+    {
       resolve: "gatsby-plugin-google-tagmanager",
       options: {
         id: process.env.GOOGLE_TAGMANAGER_ID,
