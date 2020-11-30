@@ -11,14 +11,14 @@ const BlogIndex = (props) => {
     <div>
       <SEO />
       <Layout>
-        <h1>新着記事</h1>
         <PostUl>
+          <PostLiStartBorder />
           {props.data.allContentfulBlogPost.edges.map((edge) => {
             return (
               <PostLink key={edge.node.slug} to={`/${edge.node.slug}`}>
                 <PostLi>
-                  <h2>{edge.node.title}</h2>
                   <PostPublishedData>{edge.node.publishedDate}</PostPublishedData>
+                  <PostTitle>{edge.node.title}</PostTitle>
                 </PostLi>
               </PostLink>
             )
@@ -52,19 +52,24 @@ export const pageQuery = graphql`
   }
 `
 
+
+const PostLiStartBorder = styled.hr`
+  border-top: #F7F7F7 solid;
+  border-width: 1px 0 0 0;
+  margin: 0;
+`
+
 const PostUl = styled.ul`
   list-style: none;
   padding: 0;
 `
 
 const PostLi = styled.li`
-  background-color: #eee;
-  padding: 1rem 3rem;
-  margin-bottom: 1rem;
+  border-bottom: 1px #F7F7F7 solid;
+  padding: .5rem 3rem;
   text-decoration: none;
-  border-radius: 15px;
   &:hover {
-    background-color: #ddd;
+    background-color: #eee;
   }
 `
 
@@ -73,7 +78,11 @@ const PostLink = styled(Link)`
   text-decoration: none;
 `
 
+const PostTitle = styled.h2`
+  font-size: 1rem;
+`
+
 const PostPublishedData = styled.p`
-  font-style: italic;
   color: #555;
+  font-size: 0.7rem;
 `
