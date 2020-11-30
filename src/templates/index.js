@@ -1,35 +1,19 @@
-import React from "react"
-import { useStaticQuery, graphql, Link } from 'gatsby';
+import React from 'react';
+import { Link, graphql } from 'gatsby'
 import styled from 'styled-components';
 import SEO from '../components/SEO';
 
 import Layout from '../components/layout';
+import Pagination from '../components/pagination';
 
-const Home = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      allContentfulBlogPost(
-        sort: {fields: publishedDate, order: DESC },
-        limit: 5
-      ) {
-        edges {
-          node {
-            title
-            slug
-            publishedDate(formatString: "YYYY年MM月D日")
-          }
-        }
-      }
-    }
-  `)
-
+const BlogIndex = (props) => {
   return (
     <div>
       <SEO />
       <Layout>
         <h1>新着記事</h1>
         <PostUl>
-          {data.allContentfulBlogPost.edges.map((edge) => {
+          {props.data.allContentfulBlogPost.edges.map((edge) => {
             return (
               <PostLink key={edge.node.slug} to={`/${edge.node.slug}`}>
                 <PostLi>
@@ -40,12 +24,33 @@ const Home = () => {
             )
           })}
         </PostUl>
+        <Pagination props={props}></Pagination>
+        {/* <Link to={props.pageContext.previousPagePath}>Previous</Link>
+        <Link to={props.pageContext.nextPagePath}>Next</Link> */}
       </Layout>
     </div>
   )
 }
 
-export default Home
+export default BlogIndex
+
+export const pageQuery = graphql`
+  query ($skip: Int!, $limit: Int!) {
+    allContentfulBlogPost(
+      sort: { fields: publishedDate, order: DESC }
+      skip: $skip
+      limit: $limit
+    ) {
+      edges {
+        node {
+          title
+          slug
+          publishedDate(formatString: "YYYY年MM月D日")
+        }
+      }
+    }
+  }
+`
 
 const PostUl = styled.ul`
   list-style: none;
