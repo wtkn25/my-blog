@@ -28,8 +28,6 @@ const BlogIndex = (props) => {
           })}
         </PostUl>
         <Pagination props={props}></Pagination>
-        {/* <Link to={props.pageContext.previousPagePath}>Previous</Link>
-        <Link to={props.pageContext.nextPagePath}>Next</Link> */}
       </Layout>
     </div>
   )
