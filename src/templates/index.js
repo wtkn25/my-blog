@@ -17,7 +17,7 @@ const BlogIndex = (props) => {
           <PostLiStartBorder />
           {props.data.allContentfulBlogPost.edges.map((edge) => {
             return (
-              <PostLink key={edge.node.slug} to={`/${edge.node.slug}`}>
+              <PostLink key={edge.node.slug} to={`/${edge.node.slug}/`}>
                 <PostLi>
                   <PublishedDate props={edge.node.publishedDate} />
                   <PostTitle>{edge.node.title}</PostTitle>
