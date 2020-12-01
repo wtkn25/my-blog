@@ -32,7 +32,7 @@ const Wrapper = styled.div`
 `
 
 const HeaderContent = styled.div`
-  max-width: 900px;
+  max-width: 800px;
   margin: 0 auto;
 `
 
