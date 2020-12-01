@@ -7,9 +7,7 @@ const Header = () => {
   return (
     <Wrapper>
       <HeaderContent>
-        <Link to="/">
-          <HPTitle>{site.siteMetadata.title}</HPTitle>
-        </Link>
+        <TitleLogo to="/">{site.siteMetadata.title}</TitleLogo>
       </HeaderContent>
     </Wrapper >
   )
@@ -38,8 +36,11 @@ const HeaderContent = styled.div`
   margin: 0 auto;
 `
 
-const HPTitle = styled.h1`
+const TitleLogo = styled(Link)`
   color: #000000;
+  font-size: 2rem;
+  font-weight: bold;
   display: inline-block;
+  margin: 1.2rem 1rem;
   text-decoration: none;
 `

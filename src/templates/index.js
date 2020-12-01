@@ -2,21 +2,18 @@ import React from 'react';
 import { Link, graphql } from 'gatsby'
 import styled from 'styled-components';
 import SEO from '../components/SEO';
-import "@fortawesome/fontawesome-svg-core/styles.css";
-import { config } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faClock } from '@fortawesome/free-solid-svg-icons'
 
 import Layout from '../components/layout';
 import Pagination from '../components/pagination';
 
-config.autoAddCss = false;
-
 const BlogIndex = (props) => {
   return (
     <div>
       <SEO />
       <Layout>
+        <PageTitle>新着記事</PageTitle>
         <PostUl>
           <PostLiStartBorder />
           {props.data.allContentfulBlogPost.edges.map((edge) => {
@@ -58,6 +55,10 @@ export const pageQuery = graphql`
   }
 `
 
+const PageTitle = styled.h1`
+  font-size: 1rem;
+  padding: .5rem 2rem;
+`
 
 const PostLiStartBorder = styled.hr`
   border-top: #F7F7F7 solid;
