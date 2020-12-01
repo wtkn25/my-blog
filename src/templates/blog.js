@@ -18,7 +18,7 @@ const BlogPost = (props) => {
         <PublishedDate props={post.publishedDate} />
         <h1>{post.title}</h1>
         <Hr />
-        <div dangerouslySetInnerHTML={{ __html: post.body.childMarkdownRemark.html }} />
+        <PostContent dangerouslySetInnerHTML={{ __html: post.body.childMarkdownRemark.html }} />
       </Layout >
     </Wrapper>
   )
@@ -47,4 +47,33 @@ const Wrapper = styled.div`
 
 const Hr = styled.hr`
   margin-bottom: 3rem;
+`
+
+const PostContent = styled.div`
+  > h2 {
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: .2rem;
+    font-size: 1.5rem;
+  }
+
+  > h3 {
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    padding-bottom: .2rem;
+    font-size: 1.4rem;
+  }
+
+  > h4 {
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    padding-bottom: .2rem;
+    font-size: 1.2rem;
+  }
+
+  > h2 {
+    /* font-size: 2rem; */
+    /* border-bottom: 1px solid #EEE; */
+  }
 `

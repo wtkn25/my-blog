@@ -27,7 +27,7 @@ export default Layout
 
 const Grid = styled.div`
   /* max-width: 1200px; */
-  max-width: 900px;
+  max-width: 800px;
   width: 100%;
   margin: 1rem auto;
   min-height: 100vh;
@@ -38,7 +38,7 @@ const Grid = styled.div`
   /* gap: 16px; */
   > * {
     overflow: hidden;
-    padding: 16px;
+    padding: 3rem;
   }
 `
 

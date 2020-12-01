@@ -9,7 +9,8 @@ config.autoAddCss = false;
 const Global = createGlobalStyle`
   ${normalize}
   body {
-  background-color: #F7F7F7;
+    background-color: #F7F7F7;
+    font-family: -apple-system, "Segoe UI", "Helvetica Neue", "Hiragino Kaku Gothic ProN", メイリオ, meiryo, sans-serif;
   }
   blockquote {
     position: relative;
