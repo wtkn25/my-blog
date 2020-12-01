@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 import Layout from '../components/layout'
 import SEO from '../components/SEO';
-
+import PublishedDate from '../components/publishedDate';
 
 const BlogPost = (props) => {
   const post = props.data.contentfulBlogPost
@@ -15,8 +15,8 @@ const BlogPost = (props) => {
         description={post.body.childMarkdownRemark.excerpt}
       />
       <Layout>
+        <PublishedDate props={post.publishedDate} />
         <h1>{post.title}</h1>
-        <p>{post.publishedDate}</p>
         <Hr />
         <div dangerouslySetInnerHTML={{ __html: post.body.childMarkdownRemark.html }} />
       </Layout >
@@ -32,7 +32,7 @@ export const query = graphql`
       slug: {eq: $slug}
     ) {
       title
-      publishedDate(formatString: "MMMM Do, YYYY")
+      publishedDate(formatString: "YYYY年MM月D日")
       body {
         childMarkdownRemark {
           html

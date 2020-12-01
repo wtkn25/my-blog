@@ -2,11 +2,10 @@ import React from 'react';
 import { Link, graphql } from 'gatsby'
 import styled from 'styled-components';
 import SEO from '../components/SEO';
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faClock } from '@fortawesome/free-solid-svg-icons'
 
 import Layout from '../components/layout';
 import Pagination from '../components/pagination';
+import PublishedDate from '../components/publishedDate';
 
 const BlogIndex = (props) => {
   return (
@@ -20,7 +19,7 @@ const BlogIndex = (props) => {
             return (
               <PostLink key={edge.node.slug} to={`/${edge.node.slug}`}>
                 <PostLi>
-                  <PostPublishedData><ClockFontAwesomeIcon icon={faClock} />{edge.node.publishedDate}</PostPublishedData>
+                  <PublishedDate props={edge.node.publishedDate} />
                   <PostTitle>{edge.node.title}</PostTitle>
                 </PostLi>
               </PostLink>
@@ -85,12 +84,4 @@ const PostLink = styled(Link)`
 
 const PostTitle = styled.h2`
   font-size: 1rem;
-`
-
-const PostPublishedData = styled.p`
-  color: #555;
-  font-size: 0.7rem;
-`
-const ClockFontAwesomeIcon = styled(FontAwesomeIcon)`
-  margin-right: 0.5rem;
 `
